@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 		//Create Title Row and an empty row
 	    var titleRow = personTable.insertRow();
+		titleRow.id = "title-row";
         var emptyRow = personTable.insertRow();
 	    var attrMap = {};
 	    var numAttrs = 0;
