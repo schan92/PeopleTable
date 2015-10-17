@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	  {name: 'Steve', gender: 'male', foo: 'not neccessarily bar',
 		job:'student', age:23, phonenumber:'555-555-5555'}, 
 	  {name: 'Just Name'}, {foo: 'Just Bar'}, {gender: 'Just gender'}, 
-		{job: 'Just Job'}
+	  {job: 'Just Job'}
 	];
   
 
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	    var personTable  = document.createElement('table');
         personTable.id = "person-table";
     
+		//Create Title Row and an empty row
 	    var titleRow = personTable.insertRow();
         var emptyRow = personTable.insertRow();
 	    var attrMap = {};
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	    }
         
         for (var i = 0; i < people.length - 1; i++) {
+		  //Clone empty columns for each person
           $(emptyRow).clone().appendTo(personTable);
         }
       
@@ -49,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	    for (var i = 0; i < people.length; i++) {
       
 	      //Fill data for each person
-          
           var person = people[i];
 	      var attributes = Object.keys(person);
           var $curRow = $("#person-table tbody").children().eq(i + 1);
